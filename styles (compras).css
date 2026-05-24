@@ -1,0 +1,662 @@
+/* Estilos Quantibook
+   Materia: HTML y CSS Adaptativo
+   Mobile First */
+
+
+/* Reset basico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* HEADER */
+header {
+    background-color: white;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #8B2635;
+}
+
+
+/* Menu de navegacion */
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    padding: 8px;
+}
+
+nav a p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Boton activo */
+nav a.activo {
+    color: #8B2635;
+    font-weight: bold;
+    border-bottom: 2px solid #8B2635;
+}
+
+
+/* MAIN */
+main {
+    padding: 30px 20px;
+    min-height: 70vh;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay para que se lea bien el texto */
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+main h2,
+main .subtitulo,
+main .opciones {
+    position: relative;
+    z-index: 1;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* Opciones (botones grandes) */
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.opcion {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.opcion:hover {
+    background-color: #f9f9f9;
+    border-color: #8B2635;
+}
+
+.opcion img {
+    margin: 0 auto 10px;
+}
+
+.opcion h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #8B2635;
+}
+
+.opcion p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+footer li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Los iconos del footer dentro de un circulo blanco */
+footer li img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+}
+
+.copy {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+
+/* ====================================
+   TABLET (a partir de 768px)
+   ==================================== */
+@media (min-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    main {
+        padding: 50px 30px;
+    }
+
+    main h2 {
+        font-size: 32px;
+    }
+
+    /* Las opciones se ponen lado a lado */
+    .opciones {
+        flex-direction: row;
+        max-width: 700px;
+    }
+
+    .opcion {
+        flex: 1;
+        padding: 35px 20px;
+    }
+
+    .opcion h3 {
+        font-size: 24px;
+    }
+
+    /* Footer en horizontal y centrado */
+    footer ul {
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+    }
+
+}
+
+
+/* ====================================
+   COMPUTADORA (a partir de 1024px)
+   ==================================== */
+@media (min-width: 1024px) {
+
+    header {
+        padding: 20px 50px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 70px 40px;
+    }
+
+    main h2 {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+    }
+
+    .opciones {
+        max-width: 900px;
+        gap: 30px;
+    }
+
+    .opcion {
+        padding: 50px 30px;
+    }
+
+    .opcion img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .opcion h3 {
+        font-size: 28px;
+    }
+
+    .opcion p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ====================================
+   PAGINA DE COMPRAS
+   ==================================== */
+
+
+/* Barra de busqueda */
+.buscador {
+    background-color: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #8B2635;
+    background-color: white;
+}
+
+.buscador button {
+    background-color: #8B2635;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* El icono de la lupa blanco */
+.buscador button img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Filtros y ordenamiento */
+.controles {
+    background-color: white;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+}
+
+.filtro {
+    position: relative;
+}
+
+.filtro summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    list-style: none;
+    user-select: none;
+}
+
+/* Quitar la flechita default del details */
+.filtro summary::-webkit-details-marker {
+    display: none;
+}
+
+.filtro[open] summary {
+    background-color: #8B2635;
+    color: white;
+}
+
+.filtro[open] summary img {
+    filter: brightness(0) invert(1);
+}
+
+.filtro ul {
+    list-style: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.filtro li {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filtro li:hover {
+    background-color: #f9f9f9;
+    color: #8B2635;
+}
+
+
+/* Grid de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Las tarjetas necesitan estar arriba del overlay del main */
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.producto:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background-color: #f5f5f5;
+}
+
+.producto .info {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.producto .nombre {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.producto .precio {
+    font-size: 13px;
+    color: #8B2635;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* TABLET: 3 columnas */
+@media (min-width: 768px) {
+
+    .buscador {
+        padding: 20px 30px;
+    }
+
+    .buscador input {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .controles {
+        padding: 15px 30px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .producto img {
+        height: 280px;
+    }
+
+    .producto .nombre,
+    .producto .precio {
+        font-size: 14px;
+    }
+
+}
+
+
+/* COMPUTADORA: 4 columnas */
+@media (min-width: 1024px) {
+
+    .buscador {
+        padding: 20px 50px;
+    }
+
+    .controles {
+        padding: 15px 50px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .producto img {
+        height: 320px;
+    }
+
+    .producto .nombre,
+    .producto .precio {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ====================================
+   MENU SANDWICH Y CATEGORIAS
+   ==================================== */
+
+/* Boton hamburguesa */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #8B2635;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background-color: #701d2a;
+}
+
+/* Las 3 barritas del icono */
+.menu-toggle .barras {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-toggle .barras span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Fondo oscuro detras del panel */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 50;
+}
+
+.overlay-menu.abierto {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Panel lateral que se desliza */
+.panel-categorias {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    max-width: 80%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 60;
+    overflow-y: auto;
+}
+
+.panel-categorias.abierto {
+    transform: translateX(0);
+}
+
+.panel-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8B2635;
+    color: white;
+    padding: 18px 20px;
+}
+
+.panel-cabecera h2 {
+    font-size: 20px;
+}
+
+.cerrar-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.panel-categorias ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.panel-categorias .cat {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border-left: 4px solid transparent;
+    padding: 14px 20px;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.panel-categorias .cat:hover {
+    background-color: #f5f5f5;
+    color: #8B2635;
+}
+
+.panel-categorias .cat.activa {
+    color: #8B2635;
+    font-weight: bold;
+    border-left-color: #8B2635;
+    background-color: #faf0f1;
+}

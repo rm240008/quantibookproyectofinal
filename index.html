@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantibook</title>
+    <link rel="stylesheet" href="styles (inicio).css">
+</head>
+<body>
+
+    <!-- Header con logo y menu -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="imagenes/logo.png" alt="logo" width="50">
+            <h1>Quantibook</h1>
+        </a>
+
+        <!-- Menu de navegacion -->
+        <nav>
+            <a href="index.html" class="activo">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="inicio" width="28">
+                <p>Inicio</p>
+            </a>
+            <a href="compras.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="carrito" width="28">
+                <p>Compras</p>
+            </a>
+            <a href="form_donacion.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3500/3500833.png" alt="donar" width="28">
+                <p>Donar</p>
+            </a>
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="perfil" width="28">
+                <p>Perfil</p>
+            </a>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         SECCION PARALLAX (portada)
+         4 capas de 1920x1080 que se mueven a
+         distinta velocidad al hacer scroll.
+         capa1 = fondo (mas lejano)
+         capa4 = frente (mas cercano)
+         ============================================ -->
+    <section class="parallax">
+        <img src="imagenes/Fondo.png" alt="Fondo Negro" class="capa" data-velocidad="0.8">
+        <img src="imagenes/Estrellas.png" alt="Estrellas" class="capa" data-velocidad="0.6">
+        <img src="imagenes/Planetas.png" alt="Planetas" class="capa" data-velocidad="0.4">
+        <img src="imagenes/Principito.png" alt="Principito mirando a las estrellas" class="capa" data-velocidad="0.2">
+
+        <!-- Frase de El Principito sobre el parallax -->
+        <div class="frase-principito">
+            <p>"Lo esencial es invisible a los ojos."</p>
+            <span>&mdash; El Principito</span>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <main>
+        <h2>¿Que quieres hacer hoy?</h2>
+        <p class="subtitulo">Compra libros o dona los que ya no usas</p>
+
+        <!-- Botones principales -->
+        <div class="opciones">
+
+            <a href="compras.html" class="opcion">
+                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="compras" width="60">
+                <h3>Compras</h3>
+                <p>Pide tus libros y te los llevamos a casa</p>
+            </a>
+
+            <a href="form_donacion.html" class="opcion">
+                <img src="https://cdn-icons-png.flaticon.com/512/3500/3500833.png" alt="donaciones" width="60">
+                <h3>Donaciones</h3>
+                <p>Dona libros y gana puntos de descuento</p>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Pie de pagina con contacto -->
+    <footer>
+        <p>Siguenos en redes sociales</p>
+        <ul>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="x" width="28">
+                @Quantibook
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram" width="28">
+                @Quantibook
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp" width="28">
+                868 949 9400
+            </li>
+        </ul>
+        <p class="copy">© 2026 Quantibook</p>
+    </footer>
+
+    <!-- JavaScript del efecto Parallax -->
+    <script src="script (inicio).js"></script>
+
+</body>
+</html>

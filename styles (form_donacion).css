@@ -1,0 +1,1043 @@
+/* Estilos Quantibook
+   Materia: HTML y CSS Adaptativo
+   Mobile First */
+
+
+/* Reset basico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* HEADER */
+header {
+    background-color: white;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #8B2635;
+}
+
+
+/* Menu de navegacion */
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    padding: 8px;
+}
+
+nav a p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Boton activo */
+nav a.activo {
+    color: #8B2635;
+    font-weight: bold;
+    border-bottom: 2px solid #8B2635;
+}
+
+
+/* MAIN */
+main {
+    padding: 30px 20px;
+    min-height: 70vh;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay para que se lea bien el texto */
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+main h2,
+main .subtitulo,
+main .opciones {
+    position: relative;
+    z-index: 1;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* Opciones (botones grandes) */
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.opcion {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.opcion:hover {
+    background-color: #f9f9f9;
+    border-color: #8B2635;
+}
+
+.opcion img {
+    margin: 0 auto 10px;
+}
+
+.opcion h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #8B2635;
+}
+
+.opcion p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+footer li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Los iconos del footer dentro de un circulo blanco */
+footer li img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+}
+
+.copy {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+
+/* ====================================
+   TABLET (a partir de 768px)
+   ==================================== */
+@media (min-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    main {
+        padding: 50px 30px;
+    }
+
+    main h2 {
+        font-size: 32px;
+    }
+
+    /* Las opciones se ponen lado a lado */
+    .opciones {
+        flex-direction: row;
+        max-width: 700px;
+    }
+
+    .opcion {
+        flex: 1;
+        padding: 35px 20px;
+    }
+
+    .opcion h3 {
+        font-size: 24px;
+    }
+
+    /* Footer en horizontal y centrado */
+    footer ul {
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+    }
+
+}
+
+
+/* ====================================
+   COMPUTADORA (a partir de 1024px)
+   ==================================== */
+@media (min-width: 1024px) {
+
+    header {
+        padding: 20px 50px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 70px 40px;
+    }
+
+    main h2 {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+    }
+
+    .opciones {
+        max-width: 900px;
+        gap: 30px;
+    }
+
+    .opcion {
+        padding: 50px 30px;
+    }
+
+    .opcion img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .opcion h3 {
+        font-size: 28px;
+    }
+
+    .opcion p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ====================================
+   PAGINA DE COMPRAS
+   ==================================== */
+
+
+/* Barra de busqueda */
+.buscador {
+    background-color: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #8B2635;
+    background-color: white;
+}
+
+.buscador button {
+    background-color: #8B2635;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* El icono de la lupa lo pongo blanco */
+.buscador button img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Filtros y ordenamiento */
+.controles {
+    background-color: white;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+}
+
+.filtro {
+    position: relative;
+}
+
+.filtro summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    list-style: none;
+    user-select: none;
+}
+
+/* Quitar la flechita default del details */
+.filtro summary::-webkit-details-marker {
+    display: none;
+}
+
+.filtro[open] summary {
+    background-color: #8B2635;
+    color: white;
+}
+
+.filtro[open] summary img {
+    filter: brightness(0) invert(1);
+}
+
+.filtro ul {
+    list-style: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.filtro li {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filtro li:hover {
+    background-color: #f9f9f9;
+    color: #8B2635;
+}
+
+
+/* Grid de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Las tarjetas necesitan estar arriba del overlay del main */
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.producto:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background-color: #f5f5f5;
+}
+
+.producto .info {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.producto .nombre {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.producto .precio {
+    font-size: 13px;
+    color: #8B2635;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* TABLET: 3 columnas */
+@media (min-width: 768px) {
+
+    .buscador {
+        padding: 20px 30px;
+    }
+
+    .buscador input {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .controles {
+        padding: 15px 30px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .producto img {
+        height: 280px;
+    }
+
+    .producto .nombre,
+    .producto .precio {
+        font-size: 14px;
+    }
+
+}
+
+
+/* COMPUTADORA: 4 columnas */
+@media (min-width: 1024px) {
+
+    .buscador {
+        padding: 20px 50px;
+    }
+
+    .controles {
+        padding: 15px 50px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .producto img {
+        height: 320px;
+    }
+
+    .producto .nombre,
+    .producto .precio {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ====================================
+   PAGINA DE LIBRO (DETALLE)
+   ==================================== */
+
+
+/* Galeria de imagenes */
+.galeria {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.imagen-principal {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.miniaturas img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.miniaturas img:hover {
+    border-color: #8B2635;
+}
+
+
+/* Informacion del libro */
+.info-libro {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.info-libro h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.info-libro .descripcion {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-libro .precio {
+    font-size: 28px;
+    font-weight: bold;
+    color: #8B2635;
+    margin-bottom: 20px;
+}
+
+
+/* Botones de compra */
+.botones-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.boton.agregar {
+    background-color: #8B2635;
+    color: white;
+}
+
+/* El icono del carrito lo pongo blanco */
+.boton.agregar img {
+    filter: brightness(0) invert(1);
+}
+
+.boton.comprar {
+    background-color: #28a745;
+    color: white;
+}
+
+.boton:hover {
+    opacity: 0.85;
+}
+
+
+/* Reseña general */
+.calificacion {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.calificacion h3 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.estrellas {
+    color: #f5c518;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* Comentarios */
+.comentarios {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.comentarios h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 17px;
+}
+
+.comentarios ul {
+    list-style: none;
+}
+
+.comentarios li {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.comentarios li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.comentarios strong {
+    color: #8B2635;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.comentarios p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* TABLET: imagen y info lado a lado */
+@media (min-width: 768px) {
+
+    .libro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .galeria,
+    .info-libro {
+        margin-bottom: 0;
+    }
+
+    /* Calificacion y comentarios ocupan ancho completo */
+    .calificacion,
+    .comentarios {
+        grid-column: 1 / -1;
+    }
+
+    .imagen-principal {
+        max-width: 100%;
+    }
+
+    .miniaturas img {
+        width: 70px;
+        height: 95px;
+    }
+
+    .info-libro h2 {
+        font-size: 26px;
+    }
+
+    .info-libro .descripcion {
+        font-size: 15px;
+    }
+
+    .info-libro .precio {
+        font-size: 34px;
+    }
+
+    .botones-compra {
+        flex-direction: row;
+    }
+
+    .boton {
+        flex: 1;
+    }
+}
+
+
+/* COMPUTADORA: mas espacio y tamaños mayores */
+@media (min-width: 1024px) {
+
+    .libro {
+        max-width: 1100px;
+        margin: 0 auto;
+        gap: 40px;
+        padding: 50px 40px;
+    }
+
+    .imagen-principal {
+        max-width: 450px;
+    }
+
+    .miniaturas img {
+        width: 85px;
+        height: 115px;
+    }
+
+    .info-libro {
+        padding: 30px;
+    }
+
+    .info-libro h2 {
+        font-size: 30px;
+    }
+
+    .info-libro .descripcion {
+        font-size: 16px;
+    }
+
+    .info-libro .precio {
+        font-size: 40px;
+    }
+
+    .estrellas {
+        font-size: 34px;
+    }
+
+}
+
+
+/* ====================================
+   PAGINA DE DONACION (FORMULARIO)
+   ==================================== */
+
+
+/* Aviso de sesion activa */
+.aviso-sesion {
+    background-color: #fff8dc;
+    border-left: 4px solid #8B2635;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.donacion h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Formulario en si */
+.formulario-donacion {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Tarjeta de campos del formulario */
+.campos {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.campos label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.campos input[type="text"],
+.campos input[type="email"],
+.campos input[type="number"],
+.campos select,
+.campos textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #fafafa;
+}
+
+.campos input:focus,
+.campos select:focus,
+.campos textarea:focus {
+    outline: none;
+    border-color: #8B2635;
+    background-color: white;
+}
+
+.campos textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+/* Boton publicar */
+.boton-publicar {
+    width: 100%;
+    background-color: #8B2635;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.boton-publicar:hover {
+    opacity: 0.9;
+}
+
+
+/* Zona para subir imagen */
+.zona-imagen {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.zona-imagen .ayuda {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.subir-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    cursor: pointer;
+    text-align: center;
+}
+
+.subir-foto:hover {
+    border-color: #8B2635;
+    background-color: white;
+}
+
+/* Ocultamos el input de archivo, el label hace la magia */
+.subir-foto input[type="file"] {
+    display: none;
+}
+
+.subir-foto p {
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    .donacion {
+        padding: 30px;
+    }
+
+    .donacion h2 {
+        font-size: 28px;
+    }
+
+    .campos,
+    .zona-imagen {
+        padding: 30px;
+    }
+
+    .campos input[type="text"],
+    .campos input[type="email"],
+    .campos input[type="number"],
+    .campos select,
+    .campos textarea {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+}
+
+
+/* COMPUTADORA: formulario al lado, imagen a la derecha */
+@media (min-width: 1024px) {
+
+    .donacion {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .formulario-donacion {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .campos {
+        flex: 1;
+    }
+
+    .zona-imagen {
+        flex: 1;
+        position: sticky;
+        top: 20px;
+    }
+
+    .subir-foto {
+        padding: 80px 30px;
+    }
+
+}
+
+
+/* Subtitulo dentro del formulario (Dirección) */
+.subtitulo-form {
+    color: #8B2635;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.texto-form {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
